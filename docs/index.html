@@ -19,9 +19,12 @@
         padding: 0 1rem;
       }
       h1, h2 { margin-bottom: 0.4rem; color: #f0f6fc; }
+      h3, h4 { margin-bottom: 0.3rem; color: #f0f6fc; }
       ul { margin-top: 0.4rem; }
       a { color: #58a6ff; }
       code { background: #161b22; padding: 0.1rem 0.35rem; border-radius: 4px; color: #c9d1d9; }
+      .muted { color: #8b949e; font-size: 0.95rem; }
+      .inline-links a { margin: 0 0.2rem; }
     </style>
   </head>
   <body>
@@ -30,13 +33,61 @@
       <p>Published briefings for market and geopolitics workflows.</p>
 
       <h2>Reports</h2>
+      <h3>Market</h3>
       <ul>
-        <li><a href="viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2Flatest.md">Market latest (rendered)</a></li>
-        <li><a href="reports/market/index.html">Market archive (rendered)</a></li>
+        <li class="inline-links">latest (
+          <a href="viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2Flatest.md">html</a>|
+          <a href="reports/market/latest.md">md</a>
+        )</li>
       </ul>
+
+      <h4>archive (limit to 5 max)</h4>
+      <ul id="market-archive">
+        <li class="muted">Loading…</li>
+      </ul>
+      <p class="muted">Full archive: <a href="reports/market/index.html">reports/market/index.html</a></p>
 
       <h2>Naming convention</h2>
       <p>Archive files use sortable UTC timestamps: <code>YYYY-MM-DDTHHMMSSZ.md</code>.</p>
     </div>
+
+    <script>
+      (async () => {
+        const listEl = document.getElementById('market-archive');
+        try {
+          const res = await fetch('reports/market/index.md', { headers: { Accept: 'text/markdown, text/plain;q=0.9, */*;q=0.1' } });
+          if (!res.ok) throw new Error(`failed to fetch index.md (${res.status})`);
+          const text = await res.text();
+          const lines = text.split('\n');
+          const entries = [];
+
+          for (const line of lines) {
+            const match = line.match(/^- \[(.+?)\]\((.+?)\)$/);
+            if (!match) continue;
+            entries.push({ label: match[1], relPath: match[2] });
+            if (entries.length >= 5) break;
+          }
+
+          if (!entries.length) {
+            listEl.innerHTML = '<li class="muted">No archive entries yet.</li>';
+            return;
+          }
+
+          listEl.innerHTML = '';
+          for (const entry of entries) {
+            const mdUrl = `reports/market/${entry.relPath}`;
+            const srcPath = `/ai-briefings/reports/market/${entry.relPath}`;
+            const htmlUrl = `viewer.html?src=${encodeURIComponent(srcPath)}`;
+
+            const li = document.createElement('li');
+            li.className = 'inline-links';
+            li.innerHTML = `${entry.label} (<a href="${htmlUrl}">html</a>|<a href="${mdUrl}">md</a>)`;
+            listEl.appendChild(li);
+          }
+        } catch (error) {
+          listEl.innerHTML = `<li class="muted">Archive unavailable: ${error.message}</li>`;
+        }
+      })();
+    </script>
   </body>
   </html>
