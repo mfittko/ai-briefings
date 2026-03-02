@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Briefing Viewer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.8.1/github-markdown.min.css" />
+    <style>
+      body { box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 24px; }
+      .nav { margin-bottom: 16px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif; font-size: 14px; }
+      .nav a { margin-right: 12px; }
+      #status { color: #666; margin-bottom: 12px; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif; }
+      @media (max-width: 767px) { body { padding: 16px; } }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.html">Home</a>
+    </div>
+    <div id="status">Loading markdown…</div>
+    <article id="content" class="markdown-body"></article>
+
+    <script>
+      (async () => {
+        const params = new URLSearchParams(window.location.search);
+        const src = params.get('src');
+        const statusEl = document.getElementById('status');
+        const contentEl = document.getElementById('content');
+
+        if (!src) {
+          statusEl.textContent = 'Missing ?src= markdown path';
+          return;
+        }
+
+        try {
+          const mdRes = await fetch(src, { headers: { Accept: 'text/markdown, text/plain;q=0.9, */*;q=0.1' } });
+          if (!mdRes.ok) throw new Error(`failed to fetch markdown (${mdRes.status})`);
+          const markdown = await mdRes.text();
+
+          const renderRes = await fetch('https://api.github.com/markdown', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'text/html'
+            },
+            body: JSON.stringify({ text: markdown, mode: 'gfm' })
+          });
+          if (!renderRes.ok) throw new Error(`failed to render markdown (${renderRes.status})`);
+          const html = await renderRes.text();
+
+          contentEl.innerHTML = html;
+          statusEl.textContent = src;
+          document.title = `Briefing Viewer · ${src.split('/').pop()}`;
+        } catch (error) {
+          statusEl.textContent = `Render error: ${error.message}`;
+        }
+      })();
+    </script>
+  </body>
+</html>
