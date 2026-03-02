@@ -1,6 +1,6 @@
 # Commodity Market Analysis (FXEmpire)
 
-- Generated: 2026-03-02T23:12:16.834Z
+- Generated: 2026-03-02T23:33:33.260Z
 - Window: last 24h (Europe/Berlin)
 - Locale: en
 
@@ -9,11 +9,11 @@
 | Commodity | Last | Change | % | Outlook | Confidence |
 |---|---:|---:|---:|---|---|
 | Brent Oil | 78.482 | -0.404 | -0.51% | Bullish bias (narrative-led) | High |
-| WTI Oil | 71.416 | -0.645 | -0.90% | Mild bearish bias (price-led) | Low |
-| Natural Gas | 3.187 | 0.107 | 3.46% | Bearish bias (narrative-led) | High |
-| Gold | 5,334.835 | -52.25 | -0.97% | Bullish bias (narrative-led) | High |
-| Silver | 89.654 | -6.12 | -6.39% | Bullish bias (narrative-led) | High |
-| Platinum | 2,298.359 | -94.514 | -3.95% | Bearish (momentum + narrative aligned) | Medium |
+| WTI Oil | 70.85 | -1.211 | -1.68% | Bearish (momentum + narrative aligned) | Low |
+| Natural Gas | 3.181 | 0.101 | 3.28% | Bearish bias (narrative-led) | High |
+| Gold | 5,332.36 | -54.725 | -1.02% | Bullish bias (narrative-led) | High |
+| Silver | 89.644 | -6.13 | -6.40% | Bullish bias (narrative-led) | High |
+| Platinum | 2,301.734 | -91.139 | -3.81% | Bearish (momentum + narrative aligned) | Medium |
 
 ## Brent Oil (brent-crude-oil)
 
@@ -32,9 +32,9 @@
 
 ## WTI Oil (wti-crude-oil)
 
-- Price action: 71.416 (-0.645, -0.90%)
+- Price action: 70.85 (-1.211, -1.68%)
 - Narrative signals: bull=0, bear=0, geopolitics=0
-- Outlook: **Mild bearish bias (price-led)**
+- Outlook: **Bearish (momentum + narrative aligned)**
 - Confidence: **Low**
 
 ### Supporting Articles
@@ -42,7 +42,7 @@
 
 ## Natural Gas (natural-gas)
 
-- Price action: 3.187 (0.107, 3.46%)
+- Price action: 3.181 (0.101, 3.28%)
 - Narrative signals: bull=10, bear=13, geopolitics=0
 - Outlook: **Bearish bias (narrative-led)**
 - Confidence: **High**
@@ -55,7 +55,7 @@
 
 ## Gold (gold)
 
-- Price action: 5,334.835 (-52.25, -0.97%)
+- Price action: 5,332.36 (-54.725, -1.02%)
 - Narrative signals: bull=28, bear=6, geopolitics=29
 - Outlook: **Bullish bias (narrative-led)**
 - Confidence: **High**
@@ -69,7 +69,7 @@
 
 ## Silver (silver)
 
-- Price action: 89.654 (-6.12, -6.39%)
+- Price action: 89.644 (-6.13, -6.40%)
 - Narrative signals: bull=19, bear=3, geopolitics=2
 - Outlook: **Bullish bias (narrative-led)**
 - Confidence: **High**
@@ -81,7 +81,7 @@
 
 ## Platinum (platinum)
 
-- Price action: 2,298.359 (-94.514, -3.95%)
+- Price action: 2,301.734 (-91.139, -3.81%)
 - Narrative signals: bull=0, bear=0, geopolitics=0
 - Outlook: **Bearish (momentum + narrative aligned)**
 - Confidence: **Medium**
