@@ -5,7 +5,14 @@
     <description>Automated market briefing archive feed</description>
     <link>https://mfittko.github.io/ai-briefings/</link>
     <atom:link href="https://mfittko.github.io/ai-briefings/reports/market/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 02 Mar 2026 23:44:58 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 23:49:14 GMT</lastBuildDate>
+    <item>
+      <title>market 2026-03-02T234913Z</title>
+      <link>https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-02T234913Z.md</link>
+      <guid isPermaLink="true">https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-02T234913Z.md</guid>
+      <pubDate>Mon, 02 Mar 2026 23:49:13 GMT</pubDate>
+      <description>Automated market briefing for 2026-03-02T234913Z</description>
+    </item>
     <item>
       <title>market 2026-03-02T234458Z</title>
       <link>https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-02T234458Z.md</link>
