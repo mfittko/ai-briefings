@@ -23,8 +23,8 @@
       ul { margin-top: 0.4rem; }
       a { color: #58a6ff; }
       code { background: #161b22; padding: 0.1rem 0.35rem; border-radius: 4px; color: #c9d1d9; }
-      .muted { color: #8b949e; font-size: 0.95rem; }
       .inline-links a { margin: 0 0.2rem; }
+      .muted { color: #8b949e; font-size: 0.95rem; }
     </style>
   </head>
   <body>
@@ -36,58 +36,24 @@
       <h3>Market</h3>
       <ul>
         <li class="inline-links">latest (
-          <a href="viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2Flatest.md">html</a>|
-          <a href="reports/market/latest.md">md</a>
+          <a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2Flatest.md">html</a>|
+          <a href="https://mfittko.github.io/ai-briefings/reports/market/latest.md">md</a>
         )</li>
+        <li>RSS feed: <a href="https://mfittko.github.io/ai-briefings/reports/market/feed.xml">feed.xml</a></li>
       </ul>
 
       <h4>archive (limit to 5 max)</h4>
-      <ul id="market-archive">
-        <li class="muted">Loading…</li>
+      <ul>
+        <li class="inline-links">2026-03-03T000307Z (<a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-03T000307Z.md">html</a>|<a href="https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-03T000307Z.md">md</a>)</li>
+        <li class="inline-links">2026-03-02T235236Z (<a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-02T235236Z.md">html</a>|<a href="https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-02T235236Z.md">md</a>)</li>
+        <li class="inline-links">2026-03-02T234913Z (<a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-02T234913Z.md">html</a>|<a href="https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-02T234913Z.md">md</a>)</li>
+        <li class="inline-links">2026-03-02T234458Z (<a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-02T234458Z.md">html</a>|<a href="https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-02T234458Z.md">md</a>)</li>
+        <li class="inline-links">2026-03-02T233341Z (<a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-02T233341Z.md">html</a>|<a href="https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-02T233341Z.md">md</a>)</li>
       </ul>
-      <p class="muted">Full archive: <a href="reports/market/index.html">reports/market/index.html</a></p>
+      <p class="muted">Full archive: <a href="https://mfittko.github.io/ai-briefings/reports/market/index.html">reports/market/index.html</a></p>
 
       <h2>Naming convention</h2>
       <p>Archive files use sortable UTC timestamps: <code>YYYY-MM-DDTHHMMSSZ.md</code>.</p>
     </div>
-
-    <script>
-      (async () => {
-        const listEl = document.getElementById('market-archive');
-        try {
-          const res = await fetch('reports/market/index.md', { headers: { Accept: 'text/markdown, text/plain;q=0.9, */*;q=0.1' } });
-          if (!res.ok) throw new Error(`failed to fetch index.md (${res.status})`);
-          const text = await res.text();
-          const lines = text.split('\n');
-          const entries = [];
-
-          for (const line of lines) {
-            const match = line.match(/^- \[(.+?)\]\((.+?)\)$/);
-            if (!match) continue;
-            entries.push({ label: match[1], relPath: match[2] });
-            if (entries.length >= 5) break;
-          }
-
-          if (!entries.length) {
-            listEl.innerHTML = '<li class="muted">No archive entries yet.</li>';
-            return;
-          }
-
-          listEl.innerHTML = '';
-          for (const entry of entries) {
-            const mdUrl = `reports/market/${entry.relPath}`;
-            const srcPath = `/ai-briefings/reports/market/${entry.relPath}`;
-            const htmlUrl = `viewer.html?src=${encodeURIComponent(srcPath)}`;
-
-            const li = document.createElement('li');
-            li.className = 'inline-links';
-            li.innerHTML = `${entry.label} (<a href="${htmlUrl}">html</a>|<a href="${mdUrl}">md</a>)`;
-            listEl.appendChild(li);
-          }
-        } catch (error) {
-          listEl.innerHTML = `<li class="muted">Archive unavailable: ${error.message}</li>`;
-        }
-      })();
-    </script>
   </body>
-  </html>
+</html>
