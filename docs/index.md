@@ -24,6 +24,20 @@ Example: `2026-03-02T220442Z.md`
 
 #### archive (limit to 5 max)
 
+- 2026-03-04T201402Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T201402Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T201402Z.md))
+- 2026-03-04T195011Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T195011Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T195011Z.md))
+- 2026-03-04T194827Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T194827Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T194827Z.md))
+- 2026-03-04T194321Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T194321Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T194321Z.md))
+- 2026-03-04T193914Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T193914Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T193914Z.md))
+
+Full archive: [reports/market/index.html](https://mfittko.github.io/ai-briefings/reports/market/index.html)
+
+
+- latest ( [html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2Flatest.md)| [md](https://mfittko.github.io/ai-briefings/reports/market/latest.md) )
+- RSS feed: [feed.xml](https://mfittko.github.io/ai-briefings/reports/market/feed.xml)
+
+#### archive (limit to 5 max)
+
 - 2026-03-04T195011Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T195011Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T195011Z.md))
 - 2026-03-04T194827Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T194827Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T194827Z.md))
 - 2026-03-04T194321Z ([html](https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-04T194321Z.md)|[md](https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-04T194321Z.md))
