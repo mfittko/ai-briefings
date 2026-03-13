@@ -8,7 +8,15 @@
     <generator>briefing-publisher</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://mfittko.github.io/ai-briefings/reports/market/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 12 Mar 2026 16:45:19 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 04:45:17 GMT</lastBuildDate>
+    <item>
+      <title>market 2026-03-13T044517Z</title>
+      <link>https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-13T044517Z.md</link>
+      <guid isPermaLink="true">https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-13T044517Z.md</guid>
+      <pubDate>Fri, 13 Mar 2026 04:45:17 GMT</pubDate>
+      <description><![CDATA[<p><strong>market briefing</strong> — 2026-03-13T044517Z</p><p><a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-13T044517Z.md">Read in HTML viewer</a> · <a href="https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-13T044517Z.md">Raw Markdown</a></p>]]></description>
+      <content:encoded><![CDATA[<p><strong>market briefing</strong> — 2026-03-13T044517Z</p><p><a href="https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-13T044517Z.md">Read in HTML viewer</a> · <a href="https://mfittko.github.io/ai-briefings/reports/market/2026/03/2026-03-13T044517Z.md">Raw Markdown</a></p>]]></content:encoded>
+    </item>
     <item>
       <title>market 2026-03-12T164518Z</title>
       <link>https://mfittko.github.io/ai-briefings/viewer.html?src=%2Fai-briefings%2Freports%2Fmarket%2F2026%2F03%2F2026-03-12T164518Z.md</link>
